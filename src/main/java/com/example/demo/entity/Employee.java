@@ -8,11 +8,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.springframework.hateoas.ResourceSupport;
+
 @Entity
 @Table(name = "Employee")
 @XmlRootElement(name = "employee")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Employee {
+public class Employee extends ResourceSupport {
 	@Id
 	@XmlAttribute(name = "id")
 	private int empId;
